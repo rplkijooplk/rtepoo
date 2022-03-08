@@ -1,7 +1,7 @@
 workflows:
   android_qa:
     name: Run tests and build debug apk
-    max_build_duration: 60
+    max_build_duration: 120
     environment:
       flutter: stable
     cache:
