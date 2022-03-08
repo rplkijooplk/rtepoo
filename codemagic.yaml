@@ -1,7 +1,7 @@
 workflows:
     ios-automatic-code-signing:
       name: iOS automatic code signing
-      instance_type: mac_pro
+      instance_type: mac_mini
       working_directory: ios/ios-automatic-code-signing-demo-project
       environment:
         vars:
@@ -76,7 +76,7 @@ workflows:
               failure: false               # To not receive a notification when a build fails
     ios-manual-code-signing:
       name: iOS manual code signing
-      instance_type: mac_pro
+      instance_type: mac_mini
       working_directory: ios/ios-manual-code-signing-demo-project      
       environment:
         vars:
@@ -195,7 +195,7 @@ workflows:
             - kevin@nevercode.io
     ios-fastlane:
         name: iOS Fastlane
-        instance_type: mac_pro
+        instance_type: mac_mini
         working_directory: integrations/fastlane-integration-demo-project
         environment:
           groups:
@@ -208,7 +208,7 @@ workflows:
           - bundle exec fastlane beta  
     flutter-yaml-ios:
       name: Flutter yaml iOS
-      instance_type: mac_pro
+      instance_type: mac_mini
       working_directory: flutter/flutter-android-and-ios-yaml-demo-project 
       max_build_duration: 120
       environment:
@@ -432,7 +432,7 @@ workflows:
     react-native-ios:
         name: React Native iOS
         max_build_duration: 120
-        instance_type: mac_pro
+        instance_type: mac_mini
         working_directory: react-native/react-native-demo-project
         environment:
             vars:
