@@ -5,6 +5,9 @@ workflows:
       instance_type: mac_mini
       working_directory: ios/ios-automatic-code-signing-demo-project
       environment:
+        XCODE_WORKSPACE: "swiftly.xcworkspace"
+        XCODE_SCHEME: "swiftly"
+        BUNDLE_ID: "io.codemagic.cmswiftly"
         vars:
         xcode: 12.5
         cocoapods: default
