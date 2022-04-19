@@ -1,7 +1,7 @@
 workflows:
     ios-automatic-code-signing:
       name: iOS automatic code signing
-      max_build_duration: 120
+      max_build_duration: 110
       instance_type: mac_mini
       working_directory: ios/ios-automatic-code-signing-demo-project
       environment:
